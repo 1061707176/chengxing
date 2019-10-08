@@ -1,0 +1,8 @@
+<!--componten/search/index.wxml-->
+<view class="search">
+    <navigator class="sear" target="" url="../../pages/search/index" hover-class="navigator-hover" open-type="navigate">
+        搜索
+    </navigator>
+      
+</view>
+  

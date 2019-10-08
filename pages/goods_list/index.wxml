@@ -1,0 +1,42 @@
+<view class="tab">
+    <view wx:for="{{tab}}" wx:key="item.id" class="{{current===index?'active':''}}" bindtap="tab"
+        data-index="{{index}}">
+        {{item.value}}
+    </view>
+</view>
+<view wx:if="{{current===0}}" >
+<navigator target="" url="../goods_detail/index?goods_id={{item.goods_id}}" hover-class="navigator-hover" open-type="navigate" wx:for="{{datalist}}" class="shoplist">
+   <view style="flex: 3" class="img" wx:if="{{item.goods_big_logo}}">
+        <image class="" src="{{item.goods_big_logo}}" mode="widthFix"/>
+   </view>
+   <view style="flex: 3" class="img" wx:else>
+        <image class="" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=679271053,2134849283&fm=26&gp=0.jpg" mode="widthFix"style="box-sizing: border-box"/>
+   </view>
+     
+      <view style="flex: 7" class="info">
+           <view class="text">
+                {{item.goods_name}}
+           </view>
+             <view style="color: red">
+                    ¥{{item.goods_price}}
+             </view>
+             
+               <!--错误提示  -->
+             
+             
+               
+      </view>
+      
+      
+    </navigator>
+    <view wx:if="{{error}}" style="text-align: center">
+       ------ {{error}}-------
+    </view>
+</view>
+
+<view wx:if="{{current===1}}">
+    1
+</view>
+<view wx:if="{{current===2}}">
+    2
+</view>

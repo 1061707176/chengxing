@@ -1,0 +1,86 @@
+<swiper indicator-color="#0094ff" indicator-active-color="#f00" indicator-dots="true">
+    <swiper-item class="" wx:for="{{swiper}}" wx:key="{{item.pics_id}}">
+        <image class="" src="{{item.pics_big}}" mode="aspectFit" />
+
+    </swiper-item>
+
+</swiper>
+
+<view style="color: red;margin:10rpx 20rpx">
+    ¥ {{deta.goods_price}}
+</view>
+<view style="display: flex">
+    <view style="flex: 8;font-size: 30rpx; padding-right: 10rpx" class="text">
+        {{deta.goods_name}}
+    </view>
+    <view style="flex: 2;border-left: 1rpx solid #000" class="icon" bindtap='coll'>
+        <text class="iconfont icon-Star" wx:if="{{!collect}}">
+
+        </text>
+        <text class="iconfont icon-Star-copy" wx:else style="color: #ffa500">
+
+        </text>
+
+        <view>
+            收藏
+        </view>
+
+    </view>
+
+
+</view>
+<view style="color: red;padding: 20rpx;border-top: 10rpx solid #ccc;border-bottom: 10rpx solid #ccc">
+    图文详情
+</view>
+
+<rich-text class="" nodes="{{deta.goods_introduce}}">
+
+</rich-text>
+<view class="bottom">
+    <view style="flex: 5.5;display: flex" class="kefu">
+        <view style="flex: 1" class="btn">
+            <view class="iconfont icon-10" style="font-size: 40rpx">
+            </view>
+            <view style="font-size: 24rpx" >
+                    联系客服
+                    <button open-type="contact" type="warn" class="gongneng">111</button>
+            </view>
+
+
+        </view>
+        <view style="flex: 1" class="btn">
+            <view class="iconfont icon-fenxiang" style="font-size: 40rpx">
+
+            </view>
+            <view style="font-size: 24rpx" >
+                分享
+                <button open-type="share" type="warn" class="gongneng">111</button>
+            </view>
+        </view>
+        <navigator hover-class="navigator-hover" open-type="switchTab" style="flex: 1" class="btn" url="../cart/index">
+            <view class="iconfont icon-3" style="font-size: 40rpx">
+
+            </view>
+            <view style="font-size: 24rpx">
+                购物车
+               
+            </view>
+        </navigator>
+    </view>
+    <view style="flex: 4.5;display: flex;" class="buy">
+        <view style="flex: 1;background-color:#ffa500 ;height: 100%;">
+            <view bindtap="cart">
+                加入购物车
+            </view>
+
+        </view>
+        <view style="flex: 1 ;background-color: #eb4450;height: 100%;">
+
+            <view>
+                立即购买
+            </view>
+
+        </view>
+    </view>
+
+</view>

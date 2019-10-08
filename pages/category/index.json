@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "search":"../../componten/search/index" 
+  }
+}

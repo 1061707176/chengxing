@@ -1,0 +1,54 @@
+swiper-item image {
+    width: 100%;
+}
+
+swiper {
+    height: 340rpx;
+}
+
+.nav {
+
+    width: 100%;
+
+    display: flex;
+
+    .navi {
+        flex: 1;
+
+        padding: 20px;
+
+        image {
+            width: 100%;
+        }
+    }
+}
+
+.commodity {
+    image{
+      
+    }
+    
+   .floor_group{
+       padding: 10rpx;
+       overflow: hidden;
+       navigator{
+        float: left;
+           width: 33.33%;
+           &:nth-last-child(-n+4) {
+         /* 原图的宽/原图的高=变化后的宽/变化后的高 */
+              height: 750rpx / 3 * 386 /232 /2;
+              image{
+                  height: 100%;
+              }
+       }
+       &:nth-last-child(-n+2){
+           border-top: 2px solid #ffffff;
+       }
+      
+       
+     
+          
+        }
+    }
+}
+

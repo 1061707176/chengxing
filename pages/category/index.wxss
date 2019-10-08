@@ -1,0 +1,22 @@
+.left {
+  padding: 15rpx 0rpx;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+.active {
+  border-left: 4rpx solid red;
+}
+.shop {
+  display: flex;
+  flex-wrap: wrap;
+}
+.shop navigator {
+  display: flex;
+  width: 33.33%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shop navigator image {
+  width: 60%;
+}

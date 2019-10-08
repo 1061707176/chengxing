@@ -1,0 +1,36 @@
+.tab {
+  display: flex;
+}
+.tab view {
+  flex: 1;
+  padding: 15rpx 0;
+  text-align: center;
+  border-bottom: 1rpx solid #ccc;
+}
+.tab .active {
+  border-bottom: 1rpx solid red;
+}
+.shoplist {
+  border-bottom: 1rpx solid #ccc;
+  display: flex;
+}
+.shoplist .img {
+  padding: 30rpx;
+}
+.shoplist .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.shoplist .info .text {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+image {
+  width: 100%;
+  height: 100%;
+}

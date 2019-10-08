@@ -1,0 +1,30 @@
+<!--pages/index/index.wxml-->
+<search></search>
+
+
+<swiper indicator-dots="true" indicator-color="rgba(167,228,240)" autoplay="true">
+    <swiper-item class="" item-id="" wx:for="{{swiper}}" wx:key="*this">
+        <image class="" src=" {{item.image_src}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+    </swiper-item>
+</swiper>
+<view class="nav">
+    <navigator target="" url="{{fenlei}}" hover-class="navigator-hover" open-type="switchTab" wx:for="{{navlist}}"
+        class="navi" wx:key="*this">
+        <image class="" src="{{item.image_src}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+
+    </navigator>
+</view>
+<view wx:for="{{commodity}}" class="commodity">
+    <image class="" src="{{item.floor_title.image_src}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+
+   <view class="floor_group">
+    <navigator  url="../..{{item1.navigator_url}}" open-type="navigate" wx:for="{{item.product_list}}" wx:for-item="item1"
+    wx:for-index="index2" wx:key="name">
+    <image class="" src="{{item1.image_src}}" mode="{{index2===0? 'widthFix':'scaleToFill'}}" />
+
+
+</navigator>
+
+   </view>
+     
+</view>

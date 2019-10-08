@@ -1,0 +1,12 @@
+
+.search {
+  padding: 5px;
+  background-color: #eb4450;
+}
+
+.sear {
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10rpx 0;
+}

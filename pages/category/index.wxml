@@ -1,0 +1,37 @@
+<search></search>
+<view class="category" style="display: flex">
+    <scroll-view class="" scroll-y="true" style="flex:2;height: 100vh;">
+        <view wx:for="{{menulist}}" wx:key="*this" class="left {{current===index?'active':''}}" data-index="{{index}}" bindtap="hand" >
+            {{item}}
+        </view>
+    </scroll-view>
+    <scroll-view class="" scroll-y="true" style="flex:8;height: 100vh;">
+        <view wx:for="{{goodlist}}" wx:key="item.cat_id">
+            <view style="text-align: center;margin: 20rpx;">
+
+                / {{item.cat_name}} /
+            </view>
+
+            <view class='shop'>
+                <navigator target="" url="../goods_list/index?query={{item2.cat_name}}&cid={{item2.cat_id}}" hover-class="navigator-hover" open-type="navigate"
+                    wx:for="{{item.children}}" wx:key="item2.cat_id" wx:for-item="item2" wx:for-index="index2" style=''>
+                    <image class="" src="{{item2.cat_icon}}" mode="widthFix" lazy-load="false" binderror=""
+                        bindload="" />
+
+                    <view>
+
+
+                        {{item2.cat_name}}
+                    </view>
+
+
+                </navigator>
+            </view>
+
+
+        </view>
+
+    </scroll-view>
+
+
+</view>
